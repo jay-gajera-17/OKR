@@ -1,0 +1,11 @@
+<div class="input-container">
+    <mat-form-field appearance="outline" class="message-input">
+      <input matInput
+             [(ngModel)]="messageText"
+             placeholder="Type a message..."
+             (keyup.enter)="onSend()">
+    </mat-form-field>
+    <button mat-fab color="primary" (click)="onSend()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>

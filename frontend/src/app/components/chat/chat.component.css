@@ -1,0 +1,17 @@
+.chat-container {
+  max-width: 800px;
+  margin: 20px auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+mat-card-actions {
+  padding: 16px;
+  margin: 0;
+}

@@ -1,0 +1,13 @@
+<mat-card class="chat-container">
+    <mat-card-header>
+      <mat-card-title>Chat Room</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <app-chat-messages [messages]="messages"></app-chat-messages>
+    </mat-card-content>
+    
+    <mat-card-actions>
+      <app-chat-input (sendMessage)="onSendMessage($event)"></app-chat-input>
+    </mat-card-actions>
+  </mat-card>

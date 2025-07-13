@@ -1,37 +1,43 @@
 .messages-container {
-  height: calc(80vh - 200px);
+  max-height: 400px;
   overflow-y: auto;
-  padding: 16px;
 }
 
 .message-item {
-  margin-bottom: 16px;
-  height: auto !important;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
 }
 
 .message {
-  max-width: 70%;
-  padding: 8px 16px;
-  border-radius: 16px;
-  background-color: #f0f0f0;
-  margin-bottom: 16px;
+  width: 100%;
+  padding-bottom: 2px;
+  
 }
 
-.message.sent {
-  margin-left: auto;
-  background-color: #2196f3;
-  color: white;
-}
-
-.message-content {
+.message-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.username {
+  font-weight: bold;
+  color: #1976d2;
 }
 
 .timestamp {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-top: 4px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.message-content {
+  margin-left: 10px;
+}
+
+.message-content p {
+  margin: 0;
+  word-wrap: break-word;
 }
 
 /* Override Material styles */

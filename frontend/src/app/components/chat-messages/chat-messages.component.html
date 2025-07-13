@@ -1,10 +1,14 @@
 <mat-list class="messages-container">
-    <mat-list-item *ngFor="let message of messages" class="message-item">
-      <div [ngClass]="{'message': true, 'sent': message.sender === 'User'}">
-        <div class="message-content">
-          <p>{{ message.text }}</p>
-          <span class="timestamp">{{ message.timestamp | date:'short' }}</span>
-        </div>
+  <mat-list-item *ngFor="let message of messages" class="message-item">
+    <div class="message">
+      <div class="message-header">
+        <span class="username">{{ message.username }}</span>
+        <span class="timestamp">{{ message.timestamp | date:'short' }}</span>
       </div>
-    </mat-list-item>
-  </mat-list>
+      <div class="message-content">
+        <p>{{ message.message }}</p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

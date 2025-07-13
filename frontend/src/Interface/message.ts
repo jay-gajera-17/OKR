@@ -1,5 +1,7 @@
 export interface Message {
-    text: string;
-    sender: string;
-    timestamp: Date;
+  id?: string;
+  username: string;
+  message: string;
+  timestamp: Date;
+  room?: string;
   }

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class AxiosService {
     private axiosInstance = axios.create({
-        baseURL: 'http://localhost:4000'
+        baseURL: 'http://localhost:4000/api'
     })
 
     getMessages() {
@@ -18,7 +18,9 @@ export class AxiosService {
         return this.axiosInstance.post('/messages', { message });
     }
 
-    
+    getRoomsMessages(room:string){
+        return this.axiosInstance.get(`/messages/${room}`);
+    }
 
     
 }

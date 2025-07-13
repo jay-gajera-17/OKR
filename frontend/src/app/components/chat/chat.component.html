@@ -1,10 +1,24 @@
 <mat-card class="chat-container">
-    <mat-card-header>
+    <mat-card-header style="margin-bottom: 10px;">
       <mat-card-title>Chat Room</mat-card-title>
+      <mat-card-subtitle>Welcome , {{currentUserName}}</mat-card-subtitle>
     </mat-card-header>
     
     <mat-card-content>
-      <app-chat-messages [messages]="messages"></app-chat-messages>
+       <div class="room-selector">
+        <mat-form-field appearance="outline">
+          <mat-label>Select Room</mat-label>
+          <input matInput [(ngModel)]="currentRoom" (change)="onRoomChange()" placeholder="Enter room name">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onRoomChange()">
+          Join Room
+        </button>
+
+        </div>
+
+        <div class="messages-container">
+          <app-chat-messages [messages]="messages"></app-chat-messages>
+        </div>
     </mat-card-content>
     
     <mat-card-actions>
